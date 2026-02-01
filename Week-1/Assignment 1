@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int num1{5};
+      float num2{3};
+     
+    cout << "num1: " << num1 << endl;
+    cout << "num2: " << num2 << endl;
+    
+    cout << "*****************\n";
+    cout << func(num1, num2);
+    cout << "*****************\n";
+    
+    cout << "num1: " << num1 << endl;
+    cout << "num2: " << num2 << endl;
+}
+
+
+
+#include "add"
+#include "subtract"
+#include "display"
+
+
+float divide_values(int a, float b) {
+  return a / b;
+}
+
+int double_me(int); // function prototype
+
+int main() {
+
+  
+  
+  int set1a{5}, set1b{6}, set2a{8}, set2b{10};
+
+  display_line();
+
+  cout << "Calling the add_2_integers() function:\n" << endl;
+
+  cout << add_2_integers(set1a, set1b) << endl;
+
+ cout << add_2_integers(set2a, set2b) << endl;
+
+  display_line();
+  
+  cout << "Calling the subtract_2_integers() function:\n" << endl;
+
+  cout << subtract_2_integers(set1a, set1b) << endl;
+  cout << subtract_2_integers(set2a, set2b) << endl;
+
+  display_line();
+
+
+  int value{0}, val1{9};
+  float val2{2.5};
+
+  cout << divide_values(val1, val2) << endl;
+
+  cout << "Enter a value and I will double it: " << endl;
+  cin >> value;
+
+  cout << "The double of " << value << " is " << double_me(value) << endl;
+
+  int double_me(int val) {
+    return val * 2;
+  }
+
+  }
